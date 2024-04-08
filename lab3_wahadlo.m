@@ -1,4 +1,4 @@
-function [sys,x0,str,ts] = lab3_wahadlo_sfun(t, x, u, flag, L, m, fi0)
+function [sys,x0,str,ts] = lab3_wahadlo(t, x, u, flag, L, m, fi0)
     switch flag
         case 0
             [sys, x0, str, ts] = mdlInitializeSizes(L, m, fi0); % Initialization
