@@ -6,8 +6,8 @@ out = sim("lab5");
 r = out.r;
 th = out.th;
 
-L = str2num(get_param("lab3/Subsystem", "l"));
-m = str2num(get_param("lab3/Subsystem", "m"));
+L = str2num(get_param("lab5/Subsystem", "l"));
+m = str2num(get_param("lab5/Subsystem", "m"));
 
 xa = 0; ya = 0; xb = 2; yb = 2; ne = 10; a = 1; ro = 0.3;
 [xs,ys] = spring(xa,ya,xb,yb,ne,a,ro); plot(xs,ys,'LineWidth',2)
