@@ -7,7 +7,7 @@ fi = out.fi;
 
 L = str2num(get_param("lab3/Subsystem", "l"));
 m = str2num(get_param("lab3/Subsystem", "m"));
-fi0 = str2num(get_param("lab3/Subsystem", "fi0"))
+fi0 = str2num(get_param("lab3/Subsystem", "fi0"));
 
 for i = 1:length(fi)
     plot([0 -L*sin(fi(i))], [0 -L*cos(fi(i))],'Color','r','LineWidth', 2)
