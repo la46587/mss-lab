@@ -23,7 +23,9 @@ for i = 1:length(h1)
     plot([S1 + S2 + 1, S1 + S2 + 2], [Swy2, Swy2], 'r')
     fill([0, S1, S1, 0], [0, 0, h1(i), h1(i)], [135/255, 205/255, 235/255], 'EdgeColor', 'none')
     fill([S1 + 1, S1 + S2 + 1, S1 + S2 + 1, S1 + 1], [0, 0, h2(i), h2(i)], [135/255, 205/255, 235/255], 'EdgeColor', 'none')
+    fill([S1, S1, S1 + 1, S1 + 1], [0, Swy1, Swy1, 0], [135/255, 205/255, 235/255], 'EdgeColor', 'none')
+    fill([S1 + S2 + 1, S1 + S2 + 1, S1 + S2 + 2, S1 + S2 + 2], [0, Swy2, Swy2, 0], [135/255, 205/255, 235/255], 'EdgeColor', 'none')
     hold off
-    axis([-0.5 5.5 -0.5 12])
+    axis([-0.5 S1 + S2 + 2.5 -0.5 max(max(h1), max(h2)) + 1.5])
     pause(0.01)
 end
