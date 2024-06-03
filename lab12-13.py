@@ -108,6 +108,15 @@ def initialize_population(n):
     return [Entity() for _ in range(n)]
 
 
+def distance(p, q):
+    return max(abs(p.x - qx), abs(p.y - q.y))
+
+
+def spread(p, q):
+    if distance(p, q) <= 2:
+        
+
+
 def simulate_population(population, duration):
     frames = []
     for _ in range(duration):
