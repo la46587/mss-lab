@@ -12,7 +12,7 @@ def lotka_volterra(t, y, alpha, beta, delta, gamma):
 
 
 # Metoda Rungego-Kutty
-def rk(func, t, y, dt, *args):
+def rk4(func, t, y, dt, *args):
     k1 = func(t, y, *args)
     k2 = func(t + dt / 2, y + dt * k1 / 2, *args)
     k3 = func(t + dt / 2, y + dt * k2 / 2, *args)
@@ -38,7 +38,7 @@ y = y0
 for i in range(len(t)):
     prey[i] = y[0]
     predator[i] = y[1]
-    y = rk(lotka_volterra, t[i], y, dt, alpha, beta, delta, gamma)
+    y = rk4(lotka_volterra, t[i], y, dt, alpha, beta, delta, gamma)
 
 fig, ax = plt.subplots()
 ax.set_xlim(0, 100)
